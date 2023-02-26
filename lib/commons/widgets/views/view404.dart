@@ -1,8 +1,12 @@
-import 'package:flutter/cupertino.dart';
+
+import 'package:calculate_note/configurations/services/custom_navigation_service.dart';
+import 'package:calculate_note/configurations/services/locator.dart';
+import 'package:calculate_note/configurations/routes/route.dart';
+
+import 'package:calculate_note/commons/dictionaries/error_message_dictionary.dart';
+
 import 'package:flutter/material.dart';
-import 'package:proyect_aplication/router/router.dart';
-import 'package:proyect_aplication/services/custom_navigation_service.dart';
-import 'package:proyect_aplication/services/locator.dart';
+
 class Views404 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -13,12 +17,15 @@ class Views404 extends StatelessWidget{
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("404",style: TextStyle(fontSize : 40 , fontWeight: FontWeight.bold ) ),
+              Text( ErrorMessageDictionary.message_error ,
+                    style: TextStyle(fontSize : 40 , fontWeight: FontWeight.bold
+                      ) 
+                  ),
               SizedBox(height: 10),
-              Text("la pagina no se encunetra ",style: TextStyle(fontSize : 20 , fontWeight: FontWeight.normal ) ),
+              Text( ErrorMessageDictionary.page_not_found ,style: TextStyle(fontSize : 20 , fontWeight: FontWeight.normal ) ),
               BackButton(
                 onPressed:() => {
-                  locator<CustomNavigationService>().navigationTo( FluroRouters.logingRoute )
+                  locator<CustomNavigationService>().navigationTo( FluroRouters.calculate_note)
                 }
                 )
           ],

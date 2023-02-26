@@ -13,7 +13,7 @@ class FluroRouters  {
   static String  student_add_note= '/student/add/note';
   static void configureRoutes (){
     router.define( calculate_note , handler: AdminHandlers.calculateNote);
-    router.define( student_add, handler: AdminHandlers.createStudent );
+    router.define( student_add, handler: AdminHandlers.newStudent );
     router.define( student_add_note, handler:  AdminHandlers.addNoteToStudent);
     router.notFoundHandler = NoPageFoundHandler.noPageFound;    
 

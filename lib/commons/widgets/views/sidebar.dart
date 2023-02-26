@@ -9,6 +9,7 @@ import 'package:calculate_note/commons/provider/side_menu_provider.dart';
 
 import 'package:calculate_note/configurations/services/custom_navigation_service.dart';
 import 'package:calculate_note/configurations/services/locator.dart';
+import 'package:calculate_note/commons/dictionaries/student_options_dictionary.dart';
 import 'package:calculate_note/configurations/routes/route.dart';
 
 
@@ -32,21 +33,33 @@ class Sidebar extends StatelessWidget {
 
           SizedBox(height: 50 ,),
 
-          TextSeparator(text: 'main'),
+          TextSeparator(text: StudentOptionsDictionary.menu_side_main ),
           
           CustomMenuItem( 
-            text:'calcular nota',
+            text:StudentOptionsDictionary.calculate_note_teamplate ,
             isActive: providerSideMenu.routeState == FluroRouters.calculate_note ,
-            iconData: Icons.compass_calibration_outlined,
+            iconData: Icons.calculate_outlined,
             onPressed:  ( ) =>  onPressed( FluroRouters.calculate_note ),),
+
+          CustomMenuItem( 
+            text:StudentOptionsDictionary.menu_side_add_student ,
+            isActive: providerSideMenu.routeState == FluroRouters.calculate_note ,
+            iconData: Icons.person_add_alt_1_outlined,
+            onPressed:  ( ) =>  onPressed( FluroRouters.student_add ),),
+
+          CustomMenuItem( 
+            text:StudentOptionsDictionary.menu_side_add_note_student ,
+            isActive: providerSideMenu.routeState == FluroRouters.calculate_note ,
+            iconData: Icons.note_add_outlined,
+            onPressed:  ( ) =>  onPressed( FluroRouters.student_add_note ),),
 
 
           SizedBox(height: 30 ,),
 
-          TextSeparator(text: 'exit'),
+          TextSeparator(text: StudentOptionsDictionary.menu_side_separator_exit),
                
           CustomMenuItem( 
-            text:'lagout',
+            text: StudentOptionsDictionary.menu_side_lagout ,
             isActive: false,
             iconData: Icons.exit_to_app_outlined,
             onPressed: () => {},

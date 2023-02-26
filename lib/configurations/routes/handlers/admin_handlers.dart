@@ -1,31 +1,22 @@
+import 'package:calculate_note/moudoles/add_note_to_student/widgets/templates/add_note_to_student.dart';
+import 'package:calculate_note/moudoles/calculate_note/widgets/templates/calculate_note.dart';
+import 'package:calculate_note/moudoles/calculate_note/widgets/templates/views_student_notes.dart';
 import 'package:fluro/fluro.dart';
 import 'package:provider/provider.dart';
-import 'package:proyect_aplication/providers/auth_provider.dart';
-import 'package:proyect_aplication/ui/views/dach_board_view.dart';
-import 'package:proyect_aplication/ui/views/login.dart';
-import 'package:proyect_aplication/ui/views/register_view.dart';
+
 
 class AdminHandlers {
-  static Handler  login = Handler(handlerFunc: ((context, parameters) {
-    final authProvider = Provider.of<AuthProvider>(context!);
-    if( authProvider.stateLogin == StateLogin.notAuthentication )
-      {
-        return  LoginView() ;
-      }
-    else{
-      return DachBoardView();
-    }
+  static Handler  calculateNote = Handler(handlerFunc: ((context, parameters) {
+    return CalculateNote();
   }));
 
 
-    static Handler register= Handler(handlerFunc: ((context, parameters) {
-      final authProvider = Provider.of<AuthProvider>(context!);
-      if( authProvider.stateLogin == StateLogin.notAuthentication )
-        {
-          return  RegisterView() ;
-        }
-      else{
-        return  RegisterView(  );
-      }
+  static Handler newStudent = Handler(handlerFunc: ((context, parameters) {
+    return ViewsStudentsNotes();
   }));
+
+  static Handler addNoteToStudent = Handler(handlerFunc: ((context, parameters) {
+    return AddNoteToStudent();
+  }));
+
 }
