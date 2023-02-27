@@ -1,16 +1,11 @@
-# proyect_aplication
+# proyect_operations_student
 
-A new Flutter project.
-
+este es un nuevo proecto en flutter 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+usted puede agregar una nota a un estudiante eligiendo la opcion del menu izquierdo calcular nota.
+puede ver las notas calculadas a a los estudiantes en el menu izquierdo views students,
+puede calcular un numero perfecto con la opcion numero percto menu izquierdo,
+puede invertir una cadena con la opcion invertir cadena menu izquierda,
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+si el menu no aparese dirija su atencion a la esquina superior izquierda y podra ver una opcion para deplegarlo .
