@@ -1,11 +1,10 @@
+
+
 import 'package:calculate_note/domain/entities/enum_entities.dart';
 import 'package:calculate_note/domain/entities/student.dart';
-import 'package:calculate_note/moudoles/calculate_note/providers/register_form_providers.dart';
+import 'package:calculate_note/moudoles/operations_student/providers/register_form_providers.dart';
 
 
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
 

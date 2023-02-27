@@ -1,18 +1,15 @@
 
 
 import 'package:calculate_note/commons/dictionaries/error_message_dictionary.dart';
-import 'package:calculate_note/configurations/services/locator.dart';
-import 'package:calculate_note/configurations/services/custom_navigation_service.dart';
-import 'package:calculate_note/configurations/routes/route.dart';
-
 import 'package:calculate_note/commons/dictionaries/student_options_dictionary.dart';
 
 import 'package:calculate_note/commons/widgets/molecules/custom_inputs.dart';
 import 'package:calculate_note/domain/entities/enum_entities.dart';
-import 'package:calculate_note/moudoles/calculate_note/providers/data_student_provider.dart';
-import 'package:calculate_note/moudoles/calculate_note/providers/register_form_providers.dart';
-import 'package:calculate_note/moudoles/calculate_note/widgets/atoms/custom_outlined.dart';
-import 'package:calculate_note/moudoles/calculate_note/widgets/atoms/link_text.dart';
+import 'package:calculate_note/moudoles/operations_student/providers/data_student_provider.dart';
+import 'package:calculate_note/moudoles/operations_student/providers/register_form_providers.dart';
+import 'package:calculate_note/moudoles/operations_student/widgets/atoms/custom_outlined.dart';
+import 'package:calculate_note/moudoles/operations_student/widgets/atoms/link_text.dart';
+import 'package:calculate_note/moudoles/operations_student/widgets/atoms/custom_outlined.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -80,6 +77,7 @@ class _CalculateNote extends State<CalculateNote> {
                                 icon: Icons.abc_outlined,
                                 ) ,
                               ),
+                              
                         DropdownButton(
                           dropdownColor: Colors.blue,
                           value: dropdownSubjects,                
@@ -97,16 +95,16 @@ class _CalculateNote extends State<CalculateNote> {
                           },
                         ),
 
-                      SizedBox(height: 10,),
-                              ButtonOutLined(onPressed: () {
-                                if( registerFormProviders.validateForm() ) {
-                                  dataStudentProviders.addNoteToStudent( nameController.text , int.parse( noteController.text ), dropdownSubjects);
-                                } 
-                              },  text: StudentOptionsDictionary.text_button_save, isfilled:  false,),
+                        SizedBox(height: 10,),
+                        ButtonOutLined(onPressed: () {
+                          if( registerFormProviders.validateForm() ) {
+                            dataStudentProviders.addNoteToStudent( nameController.text , int.parse( noteController.text ), dropdownSubjects);
+                          } 
+                        },  text: StudentOptionsDictionary.text_button_save, isfilled:  false,),
 
-                              SizedBox(height: 20,),
-                              LinkText( nameLink:  StudentOptionsDictionary.delete_data_button , onPressed: (){
-                              },)
+                        SizedBox(height: 20,),
+                        LinkText( nameLink:  StudentOptionsDictionary.delete_data_button , onPressed: (){
+                        },)
                     ],   
                   )
                 )

@@ -6,7 +6,7 @@ import 'package:calculate_note/configurations/services/custom_navigation_service
 import 'package:calculate_note/configurations/services/locator.dart';
 import 'package:calculate_note/configurations/routes/route.dart';
 import 'package:calculate_note/configurations/services/local_storage.dart';
-import 'package:calculate_note/moudoles/calculate_note/providers/data_student_provider.dart';
+import 'package:calculate_note/moudoles/operations_student/providers/data_student_provider.dart';
 
 
 import 'package:flutter/material.dart';

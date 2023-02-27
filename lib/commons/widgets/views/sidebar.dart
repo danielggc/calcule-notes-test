@@ -43,13 +43,26 @@ class Sidebar extends StatelessWidget {
 
           CustomMenuItem( 
             text:StudentOptionsDictionary.menu_side_add_student ,
-            isActive: providerSideMenu.routeState == FluroRouters.calculate_note ,
+            isActive: providerSideMenu.routeState == FluroRouters.student_views_notes ,
             iconData: Icons.person_add_alt_1_outlined,
-            onPressed:  ( ) =>  onPressed( FluroRouters.student_add ),),
+            onPressed:  ( ) =>  onPressed( FluroRouters.student_views_notes ),),
+
+        CustomMenuItem( 
+            text:StudentOptionsDictionary.menu_side_calcule_perfect_num ,
+            isActive: providerSideMenu.routeState == FluroRouters.calculate_perfect_number ,
+            iconData: Icons.numbers_outlined,
+            onPressed:  ( ) =>  onPressed( FluroRouters.calculate_perfect_number ),),
+         
+         CustomMenuItem( 
+            text:StudentOptionsDictionary.menu_side_rivers_String ,
+            isActive: providerSideMenu.routeState == FluroRouters.rivers_string ,
+            iconData: Icons.ac_unit_outlined,
+            onPressed:  ( ) =>  onPressed( FluroRouters.rivers_string ),),
+
 
           CustomMenuItem( 
             text:StudentOptionsDictionary.menu_side_add_note_student ,
-            isActive: providerSideMenu.routeState == FluroRouters.calculate_note ,
+            isActive: providerSideMenu.routeState == FluroRouters.student_add_note ,
             iconData: Icons.note_add_outlined,
             onPressed:  ( ) =>  onPressed( FluroRouters.student_add_note ),),
 

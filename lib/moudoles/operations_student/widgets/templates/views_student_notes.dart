@@ -1,10 +1,14 @@
- import 'package:calculate_note/commons/dictionaries/student_options_dictionary.dart';
+ 
+ 
+import 'package:calculate_note/commons/dictionaries/student_options_dictionary.dart';
+
 import 'package:calculate_note/configurations/labels/custom_labels.dart';
-import 'package:calculate_note/moudoles/calculate_note/providers/data_student_provider.dart';
-import 'package:calculate_note/moudoles/calculate_note/widgets/molecules/student_data_source.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:calculate_note/moudoles/operations_student/providers/data_student_provider.dart';
+import 'package:calculate_note/moudoles/operations_student/widgets/molecules/student_data_source.dart';
+
+
+
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class ViewsStudentsNotes extends StatelessWidget{
