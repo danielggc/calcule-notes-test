@@ -1,18 +1,17 @@
+
+
 import 'package:calculate_note/domain/entities/enum_entities.dart';
 import 'package:calculate_note/domain/entities/student.dart';
-import 'package:calculate_note/moudoles/calculate_note/providers/register_form_providers.dart';
+import 'package:calculate_note/moudoles/operations_student/providers/register_form_providers.dart';
 
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
-import 'package:flutter/material.dart';
 
 
-class UsersDataSource  extends DataTableSource{
+class StudentDataSource  extends DataTableSource{
 
   final List<Student> users;
-  UsersDataSource( this.users   );
+  StudentDataSource( this.users   );
   DataRow? getRow(int idext, ){
       final user = users[idext];
       final image = Image(image:  AssetImage('no-image.jpg'), width:35, height:35 );
@@ -26,9 +25,9 @@ class UsersDataSource  extends DataTableSource{
   
           DataCell(Text(user.name)),
           DataCell(Text( calculo != null ?  calculo.name      : "null" )),
-          DataCell(Text( filosofia != null ?  filosofia.name  : "null" )),
           DataCell(Text( geometria != null ?  geometria.name  : "null" )),
           DataCell(Text( historia != null ?  historia.name    : "null" )),
+          DataCell(Text( filosofia != null ?  filosofia.name  : "null" )),
           
         ]
       );

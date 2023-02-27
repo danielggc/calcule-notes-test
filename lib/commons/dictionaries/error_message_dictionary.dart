@@ -11,4 +11,10 @@ abstract class  ErrorMessageDictionary {
 
   static const validation_note_input = 'ingrese  nota';
   static const validation_note_input_invalid =  'nota no valida';
+
+
+  static const  validation_perfect_num_null = " campo nulo";
+
+  static const  validation_reviers_string_num_null = "ingrese cadena a invertir ";
+
 }
